@@ -11,4 +11,4 @@ USER Raj
 WORKDIR /usr/share/app
 COPY --from=maven_build /spring-petclinic/target/*.jar .
 EXPOSE 8080/tcp
-CMD java -jar *.jar
+CMD ["java","-jar","spring-petclinic-3.5.0-SNAPSHOT.jar"]
