@@ -9,6 +9,6 @@ LABEL project="my_sample_app"
 RUN useradd -m -d /usr/share/app -s /bin/bash Raj
 USER Raj
 WORKDIR /usr/share/app
-COPY --from=maven_build /spring-petclinic/target/*.jar .
+COPY --from=maven_build /spring-petclinic/target/*.jar app.jar
 EXPOSE 8080/tcp
-CMD ["java","-jar","spring-petclinic-3.5.0-SNAPSHOT.jar"]
+CMD ["java","-jar","app.jar"]
